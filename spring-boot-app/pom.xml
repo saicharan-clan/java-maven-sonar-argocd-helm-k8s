@@ -9,7 +9,7 @@
     <version>1.0</version>
 
     <name>spring-boot-demo</name>
-    <url></url>
+    <url>https://example.com</url> <!-- Optional: Add a valid project URL -->
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -44,7 +44,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
+            <scope>runtime</scope> <!-- Devtools should only be used during development -->
         </dependency>
     </dependencies>
 
@@ -55,13 +55,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.abhishek.MainClass</mainClass> <!-- Replace with your actual main class -->
+                    <mainClass>com.abhishek.SpringBootDemoApplication</mainClass> <!-- Replace with your actual main class -->
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -70,6 +70,3 @@
         </plugins>
     </build>
 </project>
-           
-
-        
